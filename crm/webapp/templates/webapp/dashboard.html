@@ -1,7 +1,56 @@
-{% extends 'webapp/base.html' %}
+{% extends 'webapp/base.html' %} 
 
 {% block content %}
 
-<h1>Welcome to the Dashboard Page! {{user}}</h1>
+<h4>Welcome to the Dashboard Page! {{user}}</h4>
 
-{% endblock  %}
+<hr>
+
+<a
+  class="btn btn-dark btn-sm"
+  href="{% url 'create-record' %}"
+>
+  Create a new record
+</a>
+
+<hr>
+
+<table class="table table-light table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th scope="">ID</th>
+      <th scope="">Full name</th>
+      <th scope="">Email</th>
+      <th scope="">Phone</th>
+      <th scope="">Address</th>
+      <th scope="">City</th>
+      <th scope="">Province</th>
+      <th scope="">Country</th>
+      <th scope="">Date joined</th>
+      <th scope="">View</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  {% if records %}
+    
+    {% for record in records %}
+    <tr>
+      <td>{{record.id}}</td>
+      <td>{{record.first_name}} {{record.last_name}}</td>
+      <td>{{record.email}}</td>
+      <td>{{record.phone}}</td>
+      <td>{{record.address}}</td>
+      <td>{{record.city}}</td>
+      <td>{{record.province}}</td>
+      <td>{{record.country}}</td>
+      <td>{{record.creation_date}}</td>
+      <td><a href="{% url 'view-record' record.id %}">View</a></td>
+    </tr>
+    {% endfor %}
+
+  {% endif %}
+  </tbody>
+</table>
+
+{% endblock %}

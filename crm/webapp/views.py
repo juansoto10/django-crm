@@ -134,7 +134,7 @@ def update_record(request, pk):
                 
                 return redirect('dashboard')
             
-    context = {'form': form}
+    context = {'form': form, 'record': record}
     
     return render(request, 'webapp/update-record.html', context=context)
 

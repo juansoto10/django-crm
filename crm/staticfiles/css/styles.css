@@ -1,4 +1,233 @@
+/* Main container */
+.main-container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 112px);
+}
+
+.my-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.my-container button, .my-container a {
+  margin-top: 10px;
+}
+
+/* Form */
 .form-container {
-  width: 500px;
-  border-radius: 10px;
+  width: 450px;
+  border-radius: 14px;
+  padding: 32px 34px;
+}
+
+.form-container h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.form-container h5 {
+  margin-bottom: 12px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  border-radius: 14px;
+}
+
+.form-text {
+  margin-bottom: 18px;
+  display: block;
+}
+
+.requiredField {
+  margin-bottom: 6px;
+}
+
+/* Last texts in forms */
+.text-center p {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.my-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn-create {
+  margin-top: 20px;
+}
+
+.btn-info:hover {
+  background-color: #5b62f4;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #e52527;
+  color: white;
+}
+
+.btn-update {
+  width: 140px;
+}
+
+
+/* Home */
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 112px);
+}
+
+.text-title {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Navbar */
+.my-nav {
+  padding: 8px;
+}
+
+.home-link {
+  margin-right: 30px;
+}
+
+.my-toggler {
+  display: none;
+}
+
+/* Notifications */
+#message-timer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 60px;
+  right: 16px;
+  border-radius: 16px;
+  width: 320px;
+  height: 80px;
+  z-index: 11;
+}
+
+#message-timer p {
+  margin: 0;
+}
+
+/* View record */
+.my-card {
+  max-width: 550px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-body {
+  padding: 30px 36px;
+}
+
+.btn-action {
+  padding: 12px;
+  width: 100px;
+}
+
+
+/* Dashboard */
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+th, td {
+  min-width: 70px;
+}
+
+thead tr th {
+  background-color: #7b8ab8;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  /* Navbar */
+  .mobile-navbar {
+    text-align: center;
+    position: fixed;
+    top: 60px;
+    right: 16px;
+    z-index: 11;
+    background-color: #d9e3f1;
+    padding: 0 24px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(55,94,148,.2), -5px -5px 10px rgba(255,255,255,.4);
+  }
+
+  .my-nav-link {
+    padding: 14px 0;
+    color: #7b8ab8;
+  }
+
+  .my-toggler {
+    position: fixed;
+    top: 10px;
+    right: 16px;
+    display: block;
+    background-color: #d9e3f1;
+    border: none;
+    padding: 6px;
+    border-radius: 10px;
+  }
+
+  .my-toggler:active {
+    background-color: #c1d7f5;
+  }
+
+  /* Form */
+  .form-container {
+    width: 90%;
+    max-width: 450px;
+    padding: 26px 22px;
+  }
+
+  .form-control {
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  /* View record */
+  .btn-action {
+    padding: 8px;
+    width: 80px;
+  }
+
+  .card-body {
+    padding: 20px 16px;
+  }
+
+  .btn-update {
+    width: 100px;
+  }
+
+  /* Notifications */
+  #message-timer {
+    width: 266px;
+  }
+
+  .main-container h4 {
+    text-align: center;
+  }
 }

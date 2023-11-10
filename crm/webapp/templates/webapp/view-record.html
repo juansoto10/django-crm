@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<div class="card">
-  <p><strong>{{ record.last_name|upper }} {{ record.first_name }}</strong></p>
-
+<div class="card my-card w-100">
+  
   <div class="card-body">
+    <p class="text-center"><strong>{{ record.last_name|upper }} {{ record.first_name }}</strong></p>
     <p><strong>ID:</strong> {{ record.id }}</p>
     <p><strong>Email:</strong> {{ record.email }}</p>
     <p><strong>Phone number:</strong> {{ record.phone }}</p>
@@ -14,13 +14,14 @@
     <p><strong>Province:</strong> {{ record.province }}</p>
     <p><strong>Country:</strong> {{ record.country }}</p>
     <p><strong>Country:</strong> {{ record.creation_date }}</p>
+    
+    <div class="my-container">
+      <a class="btn-action btn btn-dark my-button" href="{% url 'dashboard' %}">Back</a>
+      <a class="btn-action btn btn-info" href="{% url 'update-record' record.id %}">Update</a>
+      <a class="btn-action btn btn-danger" href="{% url 'delete-record' record.id %}">Delete</a>
+    </div>
   </div>
 
-  <div>
-    <a class="btn btn-secondary" href="{% url 'dashboard' %}">Back</a>
-    <a class="btn btn-info" href="{% url 'update-record' record.id %}">Update</a>
-    <a class="btn btn-danger" href="{% url 'delete-record' record.id %}">Delete</a>
-  </div>
 </div>
 
 {% endblock %}

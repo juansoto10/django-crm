@@ -1,15 +1,15 @@
 <nav
-  class="navbar navbar-expand-lg bg-light"
+  class="navbar navbar-expand-lg my-nav"
   data-bs-theme="light"
 >
   <div class="container-fluid">
     <a
-      class="navbar-brand"
+      class="navbar-brand home-link"
       href="{% url '' %}"
       >Django CRM</a
     >
     <button
-      class="navbar-toggler"
+      class="my-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarColor03"
@@ -20,21 +20,21 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div
-      class="collapse navbar-collapse"
+      class="collapse navbar-collapse mobile-navbar"
       id="navbarColor03"
     >
       <ul class="navbar-nav me-auto">
         {% if user.is_authenticated %}
         <li class="nav-item">
           <a
-            class="nav-link"
+            class="nav-link my-nav-link"
             href="{% url 'dashboard' %}"
             >Dashboard</a
           >
         </li>
         <li class="nav-item">
           <a
-            class="nav-link"
+            class="nav-link my-nav-link"
             href="{% url 'user-logout' %}"
             >Sign out</a
           >
@@ -42,14 +42,14 @@
         {% else %}
         <li class="nav-item">
           <a
-            class="nav-link"
+            class="nav-link my-nav-link"
             href="{% url 'register' %}"
             >Register</a
           >
         </li>
         <li class="nav-item">
           <a
-            class="nav-link"
+            class="nav-link my-nav-link"
             href="{% url 'my-login' %}"
             >Login</a
           >

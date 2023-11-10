@@ -5,25 +5,23 @@
 {% block content %}
 
 <body>
-  <div class="form-container container bg-light shadow-md p-5">
-    <h3>Login to your account</h3>
-    
-    <hr />
-    <br />
+  <div class="form-container container bg-light shadow-md">
+    <h3 class="text-center">Login to your account</h3>
 
     <form
       method="POST"
-      autocomplete="off"
     >
       {% csrf_token %} 
       {{ form|crispy }}
 
-      <button
-        type="submit"
-        class="btn btn-dark w-100 btn-block p-2"
-      >
-        Login
-      </button>
+      <div class="w-100 my-container">
+        <button
+          type="submit"
+          class="btn btn-dark btn-block w-100 my-button"
+        >
+          Login
+        </button>
+      </div>
     </form>
 
     <div class="text-center">

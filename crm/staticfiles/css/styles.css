@@ -129,7 +129,8 @@
 
 /* View record */
 .my-card {
-  max-width: 550px;
+  width: 100%;
+  max-width: 600px;
   display: flex;
   justify-content: center;
 }
@@ -155,9 +156,9 @@ th, td {
   min-width: 70px;
 }
 
-thead tr th {
-  background-color: #7b8ab8;
-}
+/* .my-table-head {
+  background-color: #0b277b;
+} */
 
 /* Media queries */
 @media (max-width: 992px) {
